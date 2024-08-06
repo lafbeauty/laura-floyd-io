@@ -1,0 +1,91 @@
+/* Stylesheet for index.html */
+
+body {
+  background-color: #000000; /* Light gray background */
+  color: #333; /* Dark gray text color */
+  /*font-family: 'Courier New', Courier, monospace;*/
+
+@font-face{
+    src: url(/Fonts/Inconsolata/static/Inconsolata_Condensed-Bold.ttf)
+    font-family: Inconsolata_Condensed-Bold;
+  }
+
+  line-height: 1.6; /* Improved readability */
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  background-color: white;
+  margin-bottom: 30px; /* Space between sections */
+  padding: 20px; /* Inner spacing for sections */
+  border-radius: 5px; /* Rounded corners for sections */
+}
+
+h1 {
+  color: hotpink; /* Allows my name to be separate color from backgroundk*/
+    font-family: "Playwrite CL", cursive;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+
+}
+
+h2 {
+  color: #000000; /* Dark blue-gray for headings */
+}
+
+/* Center-align the about section */
+#about-section {
+  text-align: center;
+}
+
+#about-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%; /* Make the image circular */
+  margin-bottom: 20px;
+}
+
+/* Style the experience section */
+#experience-section ol {
+  padding-left: 20px;
+}
+
+/* Style the connect section */
+#connect-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#connect-section li {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #1613c2; /* Blue color for links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Style the header and footer */
+#page-header,
+#page-footer {
+  background-color: black;
+  color: hotpink;
+  text-align: center;
+  padding: 20px 0;
+}
+
+#page-footer {
+  margin-top: 30px;
+}
