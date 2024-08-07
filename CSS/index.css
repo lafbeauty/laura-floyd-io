@@ -1,8 +1,8 @@
 /* Stylesheet for index.html */
 
 body {
-  background-color: #000000; /* Light gray background */
-  color: #333; /* Dark gray text color */
+  background-color: #000000; /* black background */
+  color: rgb(58, 58, 58); /
   /*font-family: 'Courier New', Courier, monospace;*/
 
 @font-face{
@@ -22,7 +22,7 @@ main {
 }
 
 section {
-  background-color: white;
+  background-color: rgb(227, 225, 225);
   margin-bottom: 30px; /* Space between sections */
   padding: 20px; /* Inner spacing for sections */
   border-radius: 5px; /* Rounded corners for sections */
@@ -30,20 +30,25 @@ section {
 
 h1 {
   color: hotpink; /* Allows my name to be separate color from backgroundk*/
-    font-family: "Playwrite CL", cursive;
-    font-optical-sizing: auto;
+    font-family: "Playwrite CL", cursive; /* font from google*/
+   /* font-optical-sizing: auto;*/
+    font-size: 75px;
     font-weight: <weight>;
     font-style: normal;
-
 }
 
 h2 {
-  color: #000000; /* Dark blue-gray for headings */
+  color: #000000; /* Black for headings */
+  font-size: 50px;
 }
 
 /* Center-align the about section */
 #about-section {
   text-align: center;
+
+  border-color: hotpink;
+  border-width: 2px;
+  border-style: solid;
 }
 
 #about-section img {
@@ -51,33 +56,56 @@ h2 {
   height: auto;
   border-radius: 50%; /* Make the image circular */
   margin-bottom: 20px;
+
+
 }
+
 
 /* Style the experience section */
-#experience-section ol {
+#experience-section {
   padding-left: 20px;
+  text-align: left;
+
+  border-color: hotpink;
+  border-width: 2px;
+  border-style: solid ;
 }
 
+
 /* Style the connect section */
+
+#connect-section {
+
+  border-color: hotpink;
+  border-width: 2px;
+  border-style: solid;
+}
+
 #connect-section ul {
   list-style-type: none;
   padding: 0;
+
 }
 
 #connect-section li {
+  padding-left: 20px;
   margin-bottom: 10px;
-}
 
+}
+/*
 a {
-  color: #1613c2; /* Blue color for links */
+  color: #1613c2; 
   text-decoration: none;
 }
 
-a:hover {
+*/
+
+/*a:hover {
   text-decoration: underline;
-}
+}*/
 
 /* Style the header and footer */
+
 #page-header,
 #page-footer {
   background-color: black;
