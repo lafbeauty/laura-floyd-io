@@ -1,10 +1,10 @@
 /* Stylesheet for index.html */
 
-  html {
-    scroll-behavior: smooth;
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-header{
+header {
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -12,25 +12,22 @@ header{
 
 body {
   background-color: #000000; /* black background */
-  color: rgb(58, 58, 58); /
-  
-    @font-face{
-      src: url(/Fonts/Inconsolata/static/Inconsolata_Condensed-Bold.ttf)
-       font-family: Inconsolata_Condensed-Bold;
-    }
+  color: rgb(58, 58, 58);
 
-  line-height: 1.6; 
+  @font-face {
+    font-family: Inconsolata_Condensed-Bold;
+    src: url("/Fonts/Inconsolata/static/Inconsolata_Condensed-Bold.ttf");
+  }
+
+  line-height: 1.6;
   margin: 0;
   padding: 0;
-} 
-  
-
+}
 
 main {
   width: 75%;
   margin: auto;
   padding: 20px;
-  
 }
 
 section {
@@ -41,18 +38,16 @@ section {
   opacity: 1;
 }
 
-
 h1 {
   color: hotpink; /* Allows my name to be separate color from backgroundk*/
-    font-family: "Playwrite CL", cursive; /* font from google*/
-   /* font-optical-sizing: auto;*/
-    font-size: 40px;
-    font-weight: 900;
-    font-style: normal;
+  font-family: "Playwrite CL", cursive; /* font from google*/
+  /* font-optical-sizing: auto;*/
+  font-size: 40px;
+  font-weight: 900;
+  font-style: normal;
 }
 
-
-.navbar ul{
+.navbar ul {
   list-style-type: none;
   background-color: hotpink;
   padding: 0px;
@@ -60,11 +55,10 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 20px;
- /*overflow: hidden; */
+  /*overflow: hidden; */
 }
 
-
-.navbar a{
+.navbar a {
   color: rgb(231, 228, 230);
   text-decoration: none;
   font-weight: 900;
@@ -72,11 +66,9 @@ h1 {
   display: block;
 }
 
-
-
 h2 {
   color: #000000; /* Black for headings */
-  font-size: 50px;
+  font-size: 30px;
 }
 
 /* Center-align the about section */
@@ -95,7 +87,6 @@ h2 {
   margin-bottom: 0%;
 }
 
-
 /* Style the experience section */
 #experience-section {
   padding-left: 20px;
@@ -103,13 +94,12 @@ h2 {
   display: flex;
   flex-direction: column;
   /*justify-content: center;*/
-  
+
   border-color: hotpink;
   border-width: 2px;
   border-style: solid;
   scroll-margin-top: 2em; /* Adjust this value to match your header height */
 }
-
 
 #experience-section .header1,
 #experience-section .header2,
@@ -117,74 +107,66 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px
+  margin-bottom: 10px;
 }
 
 #experience-section h3,
-#experience-section h4{
+#experience-section h4 {
   margin: 0; /* Remove default margins */
 }
 
-#experience-section h4{
+#experience-section h4 {
   font-style: italic;
 }
 
-
 /* style the skills section*/
 
-#skills-section{
+#skills-section {
   border-color: hotpink;
   border-width: 2px;
   border-style: solid;
   scroll-margin-top: 3em; /* Adjust this value to match your header height */
 }
 
-
 /* style the project section */
 
-#projects-section{
+#projects-section {
   border-color: hotpink;
   border-width: 2px;
   border-style: solid;
- /* scroll-margin-top: 3em; /* Adjust this value to match your header height */
-
+  /* scroll-margin-top: 3em; /* Adjust this value to match your header height */
 }
 
 /* Style the connect section */
 
 #connect-section {
-
   border-color: hotpink;
   border-width: 2px;
   border-style: solid;
   /*scroll-margin-top: 3em; /* Adjust this value to match your header height */
 }
 
-#connect-section ul {
+.container {
+  padding: 0;
+  display: grid;
+  grid-template-row: 2; /* Automatically fit items with a minimum width */
+  gap: 1px; /* Adjust gap between items */
+}
+
+/* old css code from previous lesson when comment section was a list */
+/* #connect-section ul {
   list-style-type: none;
   padding: 0;
   display: flex;
-
-}
-
-#connect-section li {
-  padding-left: 20px;
-  margin-bottom: 10px;
-
-}
-/*
-a {
-  color: #1613c2; 
-  text-decoration: none;
-}
-
-*/
-
-/*a:hover {
-  text-decoration: underline;
 }*/
 
-/* Style the header and footer */
+/* #connect-section li {
+  padding-left: 20px;
+  margin-bottom: 10px;
+} */
+
+/* old css code from previous lesson when comment section was a list */
+
 
 #page-header,
 #page-footer {
@@ -197,3 +179,110 @@ a {
 #page-footer {
   margin-top: 30px;
 }
+
+/*Mobile media query*/
+
+@media (max-width: 600px) {
+  body {
+    margin: 8px;
+    font-size: 10px;
+  }
+
+  main {
+    width: 100%; /* Full width on mobile */
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 8px;
+  }
+
+  h2 {
+    font-size: 5px;
+  }
+
+  .navbar ul {
+    flex-direction: column; /* Stack navigation items vertically */
+    gap: 10px; /* Reduced gap for mobile */
+  }
+
+  #about-section img {
+    width: 80%; /* Make image a bit smaller on mobile */
+  }
+
+  #experience-section,
+  #skills-section,
+  #projects-section,
+  #connect-section {
+    padding: 10px; /* Adjust padding for smaller screens */
+    border-width: 1px; /* Reduced border width */
+  }
+
+  #experience-section .header1,
+  #experience-section .header2,
+  #experience-section .header3 {
+    flex-direction: column; /* Stack items vertically in experience section */
+    text-align: center; /* Center align text on smaller screens */
+  }
+
+  #connect-section ul {
+    flex-direction: column; /* Stack connect section items vertically */
+    align-items: center; /* Center align items */
+    padding: 0; /* Remove extra padding */
+  }
+
+  #connect-section li {
+    padding-left: 0; /* Remove left padding on mobile */
+    margin-bottom: 5px; /* Adjust bottom margin */
+  }
+}
+
+/* Tablet media query */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  body {
+    margin: 16px; /* Adjust margin for tablets */
+    font-size: 0.875em; /* Adjust font size for tablets */
+  }
+
+  main {
+    width: 90%; /* Adjust width for tablets */
+    padding: 15px; /* Adjust padding for tablets */
+  }
+
+  h1 {
+    font-size: 30px; /* Adjust font size for h1 on tablets */
+  }
+
+  h2 {
+    font-size: 24px; /* Adjust font size for h2 on tablets */
+  }
+
+  .navbar ul {
+    gap: 15px; /* Adjust gap for navbar items on tablets */
+  }
+
+  #about-section img {
+    width: 70%; /* Adjust image size for tablets */
+  }
+
+  #experience-section, #skills-section, #projects-section, #connect-section {
+    padding: 15px; /* Adjust padding for sections on tablets */
+    border-width: 1px; /* Maintain border width for sections */
+  }
+
+  #experience-section .header1, #experience-section .header2, #experience-section .header3 {
+    flex-direction: row; /* Maintain row direction for larger screens */
+    text-align: left; /* Align text to the left for larger screens */
+  }
+
+  #connect-section ul {
+    flex-direction: row; /* Maintain row direction for connect section items */
+    align-items: center; /* Center align items */
+    padding: 0; /* Remove extra padding */
+  }
+
+  #connect-section li {
+    padding-left: 20px; /* Maintain padding on tablets */
+    margin-bottom: 10px; /* Adjust bottom margin */
+  }
