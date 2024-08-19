@@ -81,6 +81,7 @@ h2 {
 }
 
 #about-section img {
+  object-fit: contain;
   max-width: 100%;
   height: auto;
   border-radius: 50%; /* Make the image circular */
@@ -207,7 +208,7 @@ h2 {
   }
 
   #about-section img {
-    width: 80%; /* Make image a bit smaller on mobile */
+    object-fit: scale-down; /* Make image a bit smaller on mobile */
   }
 
   #experience-section,
@@ -242,7 +243,7 @@ h2 {
 
   body {
     margin: 16px; /* Adjust margin for tablets */
-    font-size: 0.875em; /* Adjust font size for tablets */
+    font-size: 15px; /* Adjust font size for tablets */
   }
 
   main {
@@ -263,7 +264,7 @@ h2 {
   }
 
   #about-section img {
-    width: 70%; /* Adjust image size for tablets */
+    object-fit: scale-down; 
   }
 
   #experience-section, #skills-section, #projects-section, #connect-section {
