@@ -1,41 +1,78 @@
 /* Stylesheet for index.html */
 
+  html {
+    scroll-behavior: smooth;
+  }
+
+header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 body {
   background-color: #000000; /* black background */
   color: rgb(58, 58, 58); /
-  /*font-family: 'Courier New', Courier, monospace;*/
+  
+    @font-face{
+      src: url(/Fonts/Inconsolata/static/Inconsolata_Condensed-Bold.ttf)
+       font-family: Inconsolata_Condensed-Bold;
+    }
 
-@font-face{
-    src: url(/Fonts/Inconsolata/static/Inconsolata_Condensed-Bold.ttf)
-    font-family: Inconsolata_Condensed-Bold;
-  }
-
-  line-height: 1.6; /* Improved readability */
+  line-height: 1.6; 
   margin: 0;
   padding: 0;
-}
+} 
+  
+
 
 main {
-  width: 80%;
-  margin: 0 auto;
+  width: 75%;
+  margin: auto;
   padding: 20px;
+  
 }
 
 section {
-  background-color: rgb(227, 225, 225);
+  background-color: rgb(232, 223, 227);
   margin-bottom: 30px; /* Space between sections */
   padding: 20px; /* Inner spacing for sections */
   border-radius: 5px; /* Rounded corners for sections */
+  opacity: 1;
 }
+
 
 h1 {
   color: hotpink; /* Allows my name to be separate color from backgroundk*/
     font-family: "Playwrite CL", cursive; /* font from google*/
    /* font-optical-sizing: auto;*/
-    font-size: 75px;
-    font-weight: <weight>;
+    font-size: 40px;
+    font-weight: 900;
     font-style: normal;
 }
+
+
+.navbar ul{
+  list-style-type: none;
+  background-color: hotpink;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+ /*overflow: hidden; */
+}
+
+
+.navbar a{
+  color: rgb(231, 228, 230);
+  text-decoration: none;
+  font-weight: 900;
+  padding: 15px;
+  display: block;
+}
+
+
 
 h2 {
   color: #000000; /* Black for headings */
@@ -45,19 +82,17 @@ h2 {
 /* Center-align the about section */
 #about-section {
   text-align: center;
-
   border-color: hotpink;
   border-width: 2px;
   border-style: solid;
+  scroll-margin-top: 3em; /* Adjust this value to match your header height */
 }
 
 #about-section img {
   max-width: 100%;
   height: auto;
   border-radius: 50%; /* Make the image circular */
-  margin-bottom: 20px;
-
-
+  margin-bottom: 0%;
 }
 
 
@@ -65,12 +100,55 @@ h2 {
 #experience-section {
   padding-left: 20px;
   text-align: left;
-
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center;*/
+  
   border-color: hotpink;
   border-width: 2px;
-  border-style: solid ;
+  border-style: solid;
+  scroll-margin-top: 2em; /* Adjust this value to match your header height */
 }
 
+
+#experience-section .header1,
+#experience-section .header2,
+#experience-section .header3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px
+}
+
+#experience-section h3,
+#experience-section h4{
+  margin: 0; /* Remove default margins */
+}
+
+#experience-section h4{
+  font-style: italic;
+}
+
+
+/* style the skills section*/
+
+#skills-section{
+  border-color: hotpink;
+  border-width: 2px;
+  border-style: solid;
+  scroll-margin-top: 3em; /* Adjust this value to match your header height */
+}
+
+
+/* style the project section */
+
+#projects-section{
+  border-color: hotpink;
+  border-width: 2px;
+  border-style: solid;
+ /* scroll-margin-top: 3em; /* Adjust this value to match your header height */
+
+}
 
 /* Style the connect section */
 
@@ -79,11 +157,13 @@ h2 {
   border-color: hotpink;
   border-width: 2px;
   border-style: solid;
+  /*scroll-margin-top: 3em; /* Adjust this value to match your header height */
 }
 
 #connect-section ul {
   list-style-type: none;
   padding: 0;
+  display: flex;
 
 }
 
