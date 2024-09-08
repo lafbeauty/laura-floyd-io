@@ -47,7 +47,7 @@ var skills = [
 ]
 
 var skillsSection = document.getElementById("skills-section")
-console.log(skillsSection)
+//console.log(skillsSection)
 
 //var skillsList = skillsSection.querySelector("ul")
 
@@ -60,3 +60,48 @@ for (let i = 0; i < skills.length; i++) {
   skill.innerText = skills[i]
   skillsList.appendChild(skill)
 }
+
+// DOM content loaded was recommended by CTD AI
+//Used getElementbyID vs. querySeclector originally
+
+document.addEventListener("DOMContentLoaded", function () {
+  var messageForm = document.querySelector("#form form") // document.getElementById("leave_message")
+  messageForm.addEventListener("submit", function (event) {
+    event.preventDefault() // ctd ai helper suggested I add this but idk why
+
+    var usersName = event.target.usersName.value
+    var usersEmail = event.target.usersEmail.value
+    var usersMessage = event.target.usersMessage.value
+
+    //TEST
+    console.log(usersName)
+    console.log(usersEmail)
+    console.log(usersMessage)
+
+    alert("Message was submitted")
+
+    var messageSection = document.querySelector("#messages")
+    var messageList = messageSection.querySelector("ul")
+    var newMessage = document.createElement("li")
+
+    newMessage.innerHTML = `
+      
+        <a href="mailto:${usersEmail}">${usersName}</a>
+        <span>${usersMessage}</span>
+  
+    `
+
+    var removeButton = document.createElement("button")
+    removeButton.innerHTML = "Remove"
+    removeButton.addEventListener("removeButton", function (clickEvent) {
+      var entry = this.parentNode
+      entry.remove()
+    })
+
+    newMessage.appendChild(removeButton)
+
+    messageList.appendChild(newMessage)
+
+    messageForm.reset()
+  })
+})

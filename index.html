@@ -111,18 +111,43 @@
           </div>
 
           <div>
-            <a href="mailto:laura.nunya@gmail.com" target="_blank"
-              ><img src="/Images/email.png" alt="Email" width= "50"
-              height="50"</a
-            >
+            <a href="mailto:" target="_blank"
+              ><img
+                src="/Images/email.png"
+                alt="Email"
+                width="50"
+                height="50"
+              />
+            </a>
           </div>
         </div>
       </section>
     </main>
 
+    <section id="form">
+      <h2>Leave a Message</h2>
+      <form name="leave_message">
+        <label for="usersName">Your Name:</label><br />
+        <input type="text" id="usersName" required /><br />
+
+        <label for="usersEmail">Email:</label><br />
+        <input type="email" id="usersEmail" required /><br />
+
+        <label for="usersMessage">Message:</label><br />
+        <textarea id="usersMessage" required></textarea><br />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section id="messages">
+      <h2>Messages</h2>
+      <ul></ul>
+    </section>
+
     <footer id="page-footer">
-      <p>&copy; 2024 Laura A. Floyd</p>
+      <!-- <p>&copy; 2024 Laura A. Floyd</p> -->
     </footer>
+
     <script src="js/index.js"></script>
   </body>
 </html>

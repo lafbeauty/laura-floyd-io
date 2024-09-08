@@ -150,10 +150,22 @@ h2 {
 .container {
   padding: 0;
   display: grid;
-  grid-template-row: 2; /* Automatically fit items with a minimum width */
-  gap: 1px; /* Adjust gap between items */
+  /*grid-template-columns: repeat(
+    2,
+    auto
+  ); /* Automatically fit items with a minimum width */
+  grid-template-columns: auto auto;
+  gap: 20px; /* Adjust gap between items */
+  justify-content: start;
 }
 
+#form {
+  text-align: center;
+}
+
+#messages {
+  text-align: center;
+}
 /* old css code from previous lesson when comment section was a list */
 /* #connect-section ul {
   list-style-type: none;
@@ -167,7 +179,6 @@ h2 {
 } */
 
 /* old css code from previous lesson when comment section was a list */
-
 
 #page-header,
 #page-footer {
@@ -240,7 +251,6 @@ h2 {
 
 /* Tablet media query */
 @media (min-width: 601px) and (max-width: 1024px) {
-
   body {
     margin: 16px; /* Adjust margin for tablets */
     font-size: 15px; /* Adjust font size for tablets */
@@ -264,15 +274,20 @@ h2 {
   }
 
   #about-section img {
-    object-fit: scale-down; 
+    object-fit: scale-down;
   }
 
-  #experience-section, #skills-section, #projects-section, #connect-section {
+  #experience-section,
+  #skills-section,
+  #projects-section,
+  #connect-section {
     padding: 15px; /* Adjust padding for sections on tablets */
     border-width: 1px; /* Maintain border width for sections */
   }
 
-  #experience-section .header1, #experience-section .header2, #experience-section .header3 {
+  #experience-section .header1,
+  #experience-section .header2,
+  #experience-section .header3 {
     flex-direction: row; /* Maintain row direction for larger screens */
     text-align: left; /* Align text to the left for larger screens */
   }
@@ -287,3 +302,4 @@ h2 {
     padding-left: 20px; /* Maintain padding on tablets */
     margin-bottom: 10px; /* Adjust bottom margin */
   }
+}
