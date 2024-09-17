@@ -105,3 +105,21 @@ document.addEventListener("DOMContentLoaded", function () {
     messageForm.reset()
   })
 })
+
+fetch(`https://api.github.com/users/lafbeauty/repos`)
+  .then((response) => response.json())
+  .then((data) => {
+    const repositories = data
+    console.log(repositories)
+
+    const projectSection = document.getElementById("projects-section")
+    const projectList = projectSection.querySelector("ul")
+
+    for (let i = 0; i < repositories.length; i++) {
+      const project = document.createElement("li")
+      project.innerText = repositories[i].name
+      projectList.appendChild(project)
+    }
+  })
+
+  .catch((error) => console.log("not working", error))
