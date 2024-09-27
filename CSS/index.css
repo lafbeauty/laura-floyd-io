@@ -2,32 +2,48 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  height: 100%;
+  overflow-y: scroll;
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000000; /* Matching the body background */
+  z-index: 1000; /* Ensures the header stays on top of other elements */
+}
+/*header {
   position: sticky;
   top: 0;
   z-index: 1000;
-}
+}*/
 
 body {
   background-color: #000000; /* black background */
   color: rgb(58, 58, 58);
-
-  @font-face {
-    font-family: Inconsolata_Condensed-Bold;
-    src: url("/Fonts/Inconsolata/static/Inconsolata_Condensed-Bold.ttf");
-  }
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 
   line-height: 1.6;
   margin: 0;
   padding: 0;
 }
 
+@font-face {
+  font-family: Inconsolata_Condensed-Bold;
+  src: url("/Fonts/Inconsolata/static/Inconsolata_Condensed-Bold.ttf");
+}
+
 main {
   width: 75%;
   margin: auto;
   padding: 20px;
+  padding-top: 150px;
 }
 
 section {
@@ -154,7 +170,7 @@ h2 {
     2,
     auto
   ); /* Automatically fit items with a minimum width */
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   gap: 20px; /* Adjust gap between items */
   justify-content: start;
 }
@@ -247,6 +263,13 @@ h2 {
     padding-left: 0; /* Remove left padding on mobile */
     margin-bottom: 5px; /* Adjust bottom margin */
   }
+  #about-section,
+  #experience-section,
+  #skills-section,
+  #projects-section,
+  #connect-section {
+    scroll-margin-top: 100px; /* Adjust for smaller screens */
+  }
 }
 
 /* Tablet media query */
@@ -302,4 +325,11 @@ h2 {
     padding-left: 20px; /* Maintain padding on tablets */
     margin-bottom: 10px; /* Adjust bottom margin */
   }
+}
+#about-section,
+#experience-section,
+#skills-section,
+#projects-section,
+#connect-section {
+  scroll-margin-top: 150px; /* Remove the top margin to align with scroll snap */
 }
