@@ -15,11 +15,6 @@ header {
   background-color: #000000; /* Matching the body background */
   z-index: 1000; /* Ensures the header stays on top of other elements */
 }
-/*header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}*/
 
 body {
   background-color: #000000; /* black background */
@@ -33,7 +28,7 @@ body {
   margin: 0;
   padding: 0;
 }
-
+/*Google font for body*/
 @font-face {
   font-family: Inconsolata_Condensed-Bold;
   src: url("/Fonts/Inconsolata/static/Inconsolata_Condensed-Bold.ttf");
@@ -43,7 +38,8 @@ main {
   width: 75%;
   margin: auto;
   padding: 20px;
-  padding-top: 150px;
+  padding-top: 200px;
+  scroll-snap-align: start;
 }
 
 section {
@@ -52,17 +48,18 @@ section {
   padding: 20px; /* Inner spacing for sections */
   border-radius: 5px; /* Rounded corners for sections */
   opacity: 1;
+  scroll-snap-align: start;
 }
 
 h1 {
   color: hotpink; /* Allows my name to be separate color from backgroundk*/
   font-family: "Playwrite CL", cursive; /* font from google*/
-  /* font-optical-sizing: auto;*/
   font-size: 40px;
   font-weight: 900;
   font-style: normal;
 }
 
+/*styling for the nav list*/
 .navbar ul {
   list-style-type: none;
   background-color: hotpink;
@@ -93,8 +90,9 @@ h2 {
   border-color: hotpink;
   border-width: 2px;
   border-style: solid;
-  scroll-margin-top: 3em; /* Adjust this value to match your header height */
 }
+
+/*styling my image*/
 
 #about-section img {
   object-fit: contain;
@@ -110,7 +108,6 @@ h2 {
   text-align: left;
   display: flex;
   flex-direction: column;
-  /*justify-content: center;*/
 
   border-color: hotpink;
   border-width: 2px;
@@ -160,7 +157,6 @@ h2 {
   border-color: hotpink;
   border-width: 2px;
   border-style: solid;
-  /*scroll-margin-top: 3em; /* Adjust this value to match your header height */
 }
 
 .container {
@@ -174,14 +170,84 @@ h2 {
   gap: 20px; /* Adjust gap between items */
   justify-content: start;
 }
+/*styling the message area*/
+
+#form,
+#messages {
+  background-color: #000000;
+  padding: 20px;
+  margin: 0;
+  border: none;
+}
 
 #form {
-  text-align: center;
+  border-bottom: none;
+  padding-bottom: 10px;
+  margin-top: 40px;
 }
 
 #messages {
-  text-align: center;
+  border-top: none;
+  padding-top: 0;
 }
+
+#form h3 {
+  margin-top: 0;
+  color: hotpink;
+}
+
+#messages h2 {
+  padding-top: 20px;
+  font-size: smaller;
+  color: hotpink;
+}
+
+/* Style form elements for consistency */
+#form form {
+  display: flex;
+  flex-direction: column;
+}
+
+#form input,
+#form textarea {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #858383;
+  border-radius: 4px;
+  color: hotpink;
+  background-color: rgb(69, 68, 68);
+}
+
+#form button {
+  align-self: flex-start;
+  padding: 10px 20px;
+  background-color: hotpink;
+  color: #ccc;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Style the messages list */
+#messages ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#messages ul li {
+  background-color: rgb(128, 136, 128);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 1px;
+  box-shadow: 0 1px 3px rgba(121, 117, 117, 0.1);
+}
+
+#form label[for="usersName"],
+#form label[for="usersEmail"],
+#form label[for="usersMessage"] {
+  color: hotpink;
+}
+
 /* old css code from previous lesson when comment section was a list */
 /* #connect-section ul {
   list-style-type: none;
@@ -230,7 +296,7 @@ h2 {
   }
 
   .navbar ul {
-    flex-direction: column; /* Stack navigation items vertically */
+    flex-direction: column; /* Stacks navigation items vertically */
     gap: 10px; /* Reduced gap for mobile */
   }
 
@@ -268,7 +334,7 @@ h2 {
   #skills-section,
   #projects-section,
   #connect-section {
-    scroll-margin-top: 100px; /* Adjust for smaller screens */
+    scroll-margin-top: 180px; /* Adjust for smaller screens */
   }
 }
 
@@ -318,7 +384,7 @@ h2 {
   #connect-section ul {
     flex-direction: row; /* Maintain row direction for connect section items */
     align-items: center; /* Center align items */
-    padding: 0; /* Remove extra padding */
+    padding: 0;
   }
 
   #connect-section li {
@@ -331,5 +397,5 @@ h2 {
 #skills-section,
 #projects-section,
 #connect-section {
-  scroll-margin-top: 150px; /* Remove the top margin to align with scroll snap */
+  scroll-margin-top: 200px; /* Remove the top margin to align with scroll snap */
 }
