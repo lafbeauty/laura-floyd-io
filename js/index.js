@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var removeButton = document.createElement("button")
     removeButton.innerHTML = "Remove"
-    removeButton.addEventListener("removeButton", function (clickEvent) {
+    removeButton.addEventListener("click", function (clickEvent) {
       var entry = this.parentNode
       entry.remove()
     })
