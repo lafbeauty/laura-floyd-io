@@ -4,48 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Laura's Site</title>
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/newlayout.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Playwrite+CL:wght@100..400&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .playwrite-us-trad-header {
+        font-family: "Playwrite US Trad", cursive;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
   </head>
   <body>
     <header id="page-header">
-      <h1>Laura A. Floyd</h1>
-      <nav class="navbar">
-        <ul>
-          <li><a href="#about-section">About</a></li>
-          <li><a href="#experience-section">Experience</a></li>
-          <li><a href="#skills-section">Skills</a></li>
-          <li><a href="#projects-section">Projects</a></li>
-          <li><a href="#connect-section">Connect</a></li>
-        </ul>
-      </nav>
+      <div class="header-container">
+        <h1>laf</h1>
+        <nav class="navbar">
+          <ul>
+            <li><a href="#about-section">About</a></li>
+            <li><a href="#skills-section">Tech Skills</a></li>
+            <li><a href="#projects-section">Projects</a></li>
+            <li><a href="#connect-section">Connect</a></li>
+            <li><a href="#page-footer">Message Me</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
       <section id="about-section">
-        <img src="/Images/IMG_3160.JPG" alt="a picture of Laura Floyd" />
-        <h2>About</h2>
-        <p>
-          Analytical Sales Engineer with 6+ years of Enterprise SaaS Sales
-          experience. Expertise in technology evaluation, solution design, and
-          customer relationship management. </p>
-          <p>Fierce sales professional skilled in
-          uncovering customer pain and utilizing creative storytelling to
-          showcase technology.</p>
-        </p>
-        <p>Funfact, my middle name is Autumn and I grew up in Brooklyn NY.</p>
-        <p>
-          I've lived in NYC my entire life (minus the 4 years I went away to
-          college).
-        </p>
+        <div>
+          <img src="/Images/no_background.png" alt="a picture of Laura Floyd" />
+        </div>
+        <div>
+          <h2>Hello! I'm Laura</h2>
+          <p>
+            Analytical Sales Engineer with 6+ years of Enterprise SaaS Sales
+            experience. Expertise in technology evaluation, solution design, and
+            customer relationship management. Fierce sales professional skilled
+            in uncovering customer pain and utilizing creative storytelling to
+            showcase technology.Funfact, my middle name is Autumn and I grew up
+            in Brooklyn NY. I've lived in NYC my entire life (minus the 4 years
+            I went away to college).
+          </p>
+        </div>
       </section>
 
-      <section id="experience-section">
+      <!--  <section id="experience-section">
         <h2>Experience</h2>
 
         <div class="item1">
@@ -77,10 +91,10 @@
             IBISWorld is the leading provider of Industry Intelligence in the United States.
           </p>
         </div>
-      </section>
+      </section>-->
 
       <section id="skills-section">
-        <h2 id="skills">Skills</h2>
+        <h2 id="skills">Tech Skills</h2>
         <ul id="skills-list"></ul>
       </section>
 
@@ -116,8 +130,10 @@
           </div>
 
           <div>
-            <a href="https://www.linkedin.com/in/lauraautumnfloyd/"
-             target="_blank"><img
+            <a
+              href="https://www.linkedin.com/in/lauraautumnfloyd/"
+              target="_blank"
+              ><img
                 src="/Images/linkedin.png"
                 alt="Linkedin"
                 width="50"
@@ -125,35 +141,34 @@
               />
             </a>
           </div>
-
         </div>
       </section>
     </main>
 
-    <section id="form">
-      <h3>Leave a Message</h3>
-      <form name="leave_message">
-        <label for="usersName">Your Name:</label><br />
-        <input type="text" id="usersName" required /><br />
-
-        <label for="usersEmail">Email:</label><br />
-        <input type="email" id="usersEmail" required /><br />
-
-        <label for="usersMessage">Message:</label><br />
-        <textarea id="usersMessage" required></textarea><br />
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-
-    <section id="messages">
+    <!-- <section id="messages">
       <h2>Your Submitted Message</h2>
       <ul></ul>
-    </section>
+    </section> -->
 
     <footer id="page-footer">
+      <section id="form">
+        <h3>Leave me a note</h3>
+        <form name="leave_message">
+          <label for="usersName">Your Name:</label><br />
+          <input type="text" id="usersName" required /><br />
+
+          <label for="usersEmail">Email:</label><br />
+          <input type="email" id="usersEmail" required /><br />
+
+          <label for="usersMessage">Message:</label><br />
+          <textarea id="usersMessage" required></textarea><br />
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+
       <!-- <p>&copy; 2024 Laura A. Floyd</p> -->
     </footer>
 
-    <script src="js/index.js"></script>
+    <script src="js/newjavascript.js"></script>
   </body>
 </html>
